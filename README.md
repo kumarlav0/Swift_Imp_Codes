@@ -71,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize 
        {
 
-           let noOfCellsInRow = 3
+           let noOfCellsInRow = 3 // set here your desigred number
            let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
            let totalSpace = flowLayout.sectionInset.left
                              + flowLayout.sectionInset.right
