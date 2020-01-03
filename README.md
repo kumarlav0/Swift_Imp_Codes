@@ -41,5 +41,9 @@
         navigationItem.titleView = imageView
     }
 
-
 ```
+
+<h5> Navigation Title as a logo Example:  </h5>
+<img src="https://i.stack.imgur.com/JeZZY.png" width="400" height="200">
+
+
