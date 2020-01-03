@@ -123,3 +123,10 @@ class CollectionViewController: UICollectionViewController {
 ```
 <h5> CollectionView items Example:  </h5>
 <img src="https://i.stack.imgur.com/O7oAX.png" width="889" height="431">
+
+
+<h2> Best Swift Blogs/Websites:  </h2>
+
+<h4> 1.theswiftdev https://theswiftdev.com/  </h4>
+<h4> 2.Easy Google Maps Setup Tutorial— Swift 5 https://medium.com/better-programming/easy-google-maps-setup-tutorial-swift-4-f6d5c093817e  </h4>
+
