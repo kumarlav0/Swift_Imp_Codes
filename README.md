@@ -1,8 +1,10 @@
 # Some Important Codes for Swift.
 
+<h3> 1. How to jump to Navigation Controller screen from a Non- Navigation Controller Screen.
+   Like: from LoginViewController to HomeViewController Screen  </h3>
+   
+   
 ```Swift
-1. How to jump to Navigation Controller screen from a Non- Navigation Controller Screen.
-   Like: from LoginViewController to HomeViewController Screen
 
 @IBAction func goToNext(_ sender: Any) {
   
@@ -13,6 +15,31 @@
         
     }
 
+```
+
+<h3> 2. How to set Image in Navigation Title as a logo.  </h3>
+
+```Swift
+
+ override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.addNavBarImage()
+    }
+
+//MARK:- Mathod to set Image in Navigation title.
+ func addNavBarImage() {
+        let navController = navigationController!
+        let image = UIImage(named: "company_logo") //Your logo image name should be here
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+    }
 
 
 ```
