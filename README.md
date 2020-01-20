@@ -165,8 +165,79 @@ class CollectionViewController: UICollectionViewController {
 }
 
 ```
+
+
 <h5> CollectionView items Example:  </h5>
 <img src="https://i.stack.imgur.com/O7oAX.png" width="889" height="431">
+
+
+
+<h2> Load XIB as UIView in UIViewController:  </h2>
+
+
+```Swift
+Step1. Create Xib file and design according to your wish.
+Step2. Create UIView File with the same name as of Xib.
+Like: TestView.swift and TestView.xib
+
+
+class TestView: UIView {
+    
+    @IBOutlet var contentView: UIView!
+    
+    @IBOutlet weak var profileImgView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var subscribeButton: UIButton!
+    
+    override init(frame: CGRect) {
+        super.init(frame:frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
+        commonInit()
+    }
+    
+    // This is a very imp method to remember 
+   private func commonInit()
+    {
+        Bundle.main.loadNibNamed("TestView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+ 
+    
+}
+
+// Used in ViewController
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var testView: TestView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        testView.profileImgView.image = #imageLiteral(resourceName: "download")
+        testView.userNameLabel.text! = "New text on label"
+        
+        testView.subscribeButton.addTarget(self, action: #selector(subscribe), for: .touchUpInside)
+    }
+
+    @objc func subscribe(){
+        print("Clicked.....")
+    }
+    
+    
+}
+
+```
+
 
 
 <h2> Best Swift Blogs/Websites:  </h2>
