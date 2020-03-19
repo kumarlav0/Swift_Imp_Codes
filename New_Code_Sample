@@ -1,0 +1,40 @@
+
+# Some Important Codes for Swift.
+
+```Swift
+let dublicateArr = [0,1,1,2,4,6,7,2,1,0,8]
+ override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        print("Remove Dublicate:::",removeDublicate(dublicateArr))
+    }
+
+
+ func removeDublicate(_ arr:[Int]) -> [Int]
+      {
+        var NewArr = [Int]()
+      
+        for i in 0..<arr.count{
+           var count = 0
+            for j in 0..<arr.count{
+
+                if arr[i] == arr[j]{
+                    print("i, j",i,j)
+                    if j > i{
+                        count += 1
+                    }
+                   
+                }
+
+            }
+            
+            print("Coiunt::",count)
+            if count == 0{
+                  NewArr.append(arr[i])
+            }
+
+          }
+        
+          return NewArr
+      }
+```
