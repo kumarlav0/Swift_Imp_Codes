@@ -19,7 +19,7 @@ let dublicateArr = [0,1,1,2,4,6,7,2,1,0,8]
             for j in 0..<arr.count{
 
                 if arr[i] == arr[j]{
-                    print("i, j",i,j)
+                   
                     if j > i{
                         count += 1
                     }
@@ -28,7 +28,6 @@ let dublicateArr = [0,1,1,2,4,6,7,2,1,0,8]
 
             }
             
-            print("Coiunt::",count)
             if count == 0{
                   NewArr.append(arr[i])
             }
