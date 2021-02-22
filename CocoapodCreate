@@ -1,0 +1,37 @@
+
+
+
+How to Create your Own Cocoapods
+There is few basic commands which generally uses.
+
+//============================ Command =====================
+
+sudo gem install cocoapods
+pod —version
+
+ pod lib create YouProjectName 
+
+
+cd YouProjectName  "Navigate to the root folder of your project"
+
+YourProjectPath : git init
+
+YourProjectPath:  git add -A
+
+YourProjectPath : git commit  —m  "Initial commit with cocoa pods  template"
+
+YourProjectPath : git remote add origin  urlHere
+
+#”Replace with your remote URL"
+
+YourProjectPath :  git push —u origin master
+
+YourProjectPath : pod trunk register 'Your email ID'
+
+YourProjectPath : pod lib lint  YourProjectName.podspec
+
+YourProjectPath : pod trunk push YourProjectName.podspec
+
+YourProjectPath  :  pod install
+
+YourProjectPath : pod update
